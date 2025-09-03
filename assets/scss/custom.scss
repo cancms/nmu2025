@@ -1,0 +1,22 @@
+// Override this file to add your own SCSS styling.
+
+$bg-primary-color: #05336b;
+$text-primary-color: #343a40;
+
+
+
+
+.page_nmu_home {
+  background-image: url(../images/design/mountain.png);
+  background-position: bottom;
+}
+
+
+
+
+
+
+// 手机
+@media (max-width: 780px) {
+
+}
