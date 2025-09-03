@@ -8,7 +8,7 @@ body {
 }
 @font-face {
   font-family: "ARIAL";
-/*src: url("../font/ARIAL.TTF");*/
+  src: url("../fonts/arial.ttf");
 }
 @font-face {
   font-family: "calisto_ft";

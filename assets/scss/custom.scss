@@ -4,11 +4,18 @@ $bg-primary-color: #05336b;
 $text-primary-color: #343a40;
 
 
-
+@media (min-width: 992px) {
+  .container {
+    max-width: 1600px;
+  }
+}
 
 .page_nmu_home {
-  background-image: url(../images/design/mountain.png);
-  background-position: bottom;
+  .index-bg {
+    background-image: url(../images/design/mountain.png);
+    background-position: bottom;
+  }
+
 }
 
 
