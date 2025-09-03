@@ -11,9 +11,9 @@ name = "David Blue"
 
   # Menu
   menu_primary = "#fff"
-  menu_text = "#34495e"
-  menu_text_active = "#adc3f4"
-  menu_title = "#2b2b2b"
+  menu_text = "#ffffffb3"
+  menu_text_active = "#fff"
+  menu_title = "#fff"
 
 
   # Home sections

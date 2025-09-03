@@ -24,6 +24,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   {{ end }}
 
+
+
+  <link href='{{ "css/styles.css" | relURL }}' rel="stylesheet">
+
+
+
   {{/* Load Google Fonts if the site's Font Theme uses them. */}}
   {{/* Note: we cannot use SRI with Google Fonts because the CSS is dynamically generated according to the user agent. */}}
   {{ with ($scr.Get "google_fonts") }}

@@ -1,22 +1,96 @@
 // Override this file to add your own SCSS styling.
 
 $bg-primary-color: #05336b;
-$text-primary-color: #343a40;
+$text-primary-color: #212121;
 
+body, html {
+  font-family: "calisto_ft";
+  color: $text-primary-color;
+}
 
 @media (min-width: 992px) {
-  .container {
+  .container, .container-xl {
     max-width: 1600px;
   }
 }
 
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  color: $text-primary-color;
+}
+
+
+.navbar {
+  height: 120px;
+  background: #23232d;
+  color: white;
+  .dropdown-item {
+    color: #000 !important;
+  }
+
+  .nav-item {
+
+    background-image: url(../images/design/xy.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 12rem;
+    text-align: center;
+    height: 5.5rem;
+    border: 0px solid;
+
+  }
+
+  .navbar-brand {
+    img {
+      max-height: 48px;
+    }
+  }
+
+}
+#navbar-main .main-menu-item ul li .nav-link {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #ffffffb3;
+}
+
+
+
+.common-block-content {
+  font-size: 1.8rem;
+  text-align: justify;
+  text-indent: 2em;
+}
 .page_nmu_home {
   .index-bg {
     background-image: url(../images/design/mountain.png);
     background-position: bottom;
+    background-size: 104% 100%;
+    background-repeat: no-repeat;
+    padding: 5rem 0 0 0;
+
+    .content-row {
+      margin: 5rem 0 0 0;
+
+      h2 {
+        font-size: 3.15rem;
+        font-weight: 700;
+      }
+      .common-block-content {
+        h3{
+          text-align: center;
+          font-size: inherit;
+          padding-bottom: 1rem;
+        }
+      }
+    }
   }
 
+
+
 }
+
+
 
 
 
