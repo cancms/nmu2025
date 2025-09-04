@@ -65,6 +65,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 
 
+
+.top-image {
+  img {
+    width: 100%;
+  }
+}
 .common-block-content {
   font-size: 1.8rem;
   text-align: justify;
@@ -106,6 +112,12 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 }
 
+.project-page-wrap {
+  .main-bg {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+}
 
 .scroll_at_top .back_top {
   opacity: 0;
@@ -120,6 +132,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   opacity: 1;
   img {
     width: 4rem;
+    border: 1px solid lightgrey;
   }
 }
 .page-footer {

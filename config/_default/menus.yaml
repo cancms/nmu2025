@@ -18,31 +18,31 @@ main:
 
   - name: Background
     parent: Project
-    url: 'projects/background'
+    url: 'project/background'
     weight: 10
 
 
   - name: Design
     parent: Project
-    url: 'design'
+    url: 'project/design'
     weight: 20
 
 
   - name: Result
     parent: Project
-    url: 'result'
+    url: 'project/result'
     weight: 30
 
 
   - name: Report
     parent: Project
-    url: 'report'
+    url: 'project/report'
     weight: 40
 
 
   - name: Supplementary information
     parent: Project
-    url: 'supplementary_information'
+    url: 'project/supplementary_information'
     weight: 50
 
 
