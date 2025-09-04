@@ -112,6 +112,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 }
 
+
+.common-text-content-wrap {
+  font-size: 1.5rem;
+  font-family: "ARIAL";
+}
 .project-page-wrap {
   .main-bg {
     background-size: 100% 100%;
@@ -181,7 +186,41 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 
 
+.page-team-community {
 
+  .block-content-wrap {
+    padding-top: 10rem;
+  }
+
+  .community-block-wrap {
+    padding: 3rem 0 15rem 0;
+  }
+
+  .c-block-image, .c-block-text {
+    order: 0;
+  }
+  .c-block-image {
+    img {
+      margin: 0 auto;
+    }
+  }
+
+  .c-title-image {
+    img {
+      margin: 0 auto;
+    }
+  }
+  .c-title-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+  }
+  .c-content-text {
+    text-align: justify;
+    // text-indent: 2em;
+  }
+}
 
 
 
