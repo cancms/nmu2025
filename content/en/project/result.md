@@ -3,6 +3,8 @@ title: ""
 the_page_id: project_background
 top_image: "images/design/p-result.png" 
 
+layout: background
+
 ---
  
 {{< image src="images/project/result/r1.png" >}}
