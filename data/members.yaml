@@ -1,22 +1,29 @@
 leader:
   - name: "Yaqi Gao"
+    image: "images/member/member.jpg"
     description: "Undergraduate student, Naval Medical University. She fearlessly tackles research challenges and innovative experiments. This time, she's not just competing but claiming the championship trophy."
 
 member:
-  - name: Hanyue Liu
-    description: Undergraduate student, Naval Medical University. Unshakable confidence and sheer charisma make her effortlessly claim victory in every competition!
+  - name: "Hanyue Liu"
+    image: "images/member/member.jpg"
+    description: "Undergraduate student, Naval Medical University. Unshakable confidence and sheer charisma make her effortlessly claim victory in every competition!"
 
-  - name: Xiaoyuan Chen
-    description: Undergraduate student, Naval Medical University. She keeps a single spark to a prairie fire in synthetic biology.
+  - name: "Xiaoyuan Chen"
+    image: "images/member/member.jpg"
+    description: "Undergraduate student, Naval Medical University. She keeps a single spark to a prairie fire in synthetic biology."
 
-  - name: Xinyu Zhu
-    description: Undergraduate student, Naval Medical University. Fueled by passion and confidence, she excels in medical research and teamwork. With humor and charm, she's here to dominate the competition!
+  - name: "Xinyu Zhu"
+    image: "images/member/member.jpg"
+    description: "Undergraduate student, Naval Medical University. Fueled by passion and confidence, she excels in medical research and teamwork. With humor and charm, she's here to dominate the competition!"
 
-  - name: Xudong Tang
-    description: Undergraduate student, Naval Medical University. Maybe an ordinary player in life science? But wanna be undoubtedly the specialist in synthetic biology.
+  - name: "Xudong Tang"
+    image: "images/member/member.jpg"
+    description: "Undergraduate student, Naval Medical University. Maybe an ordinary player in life science? But wanna be undoubtedly the specialist in synthetic biology."
 
-  - name: Yinran Luo
-    description: Undergraduate student, Naval Medical University. She is a diamond in the rough, a shiny piece of coal, trying to reach her goal.
+  - name: "Yinran Luo"
+    image: "images/member/member.jpg"
+    description: "Undergraduate student, Naval Medical University. She is a diamond in the rough, a shiny piece of coal, trying to reach her goal."
 
-  - name: Song Zhang
-    description: Doctoral student, Naval Medical University. There are no funds he can't raise since he published eight articles with a total IF of 70, yet he hasn't graduated yet.
+  - name: "Song Zhang"
+    image: "images/member/member.jpg"
+    description: "Doctoral student, Naval Medical University. There are no funds he can't raise since he published eight articles with a total IF of 70, yet he hasn't graduated yet."
