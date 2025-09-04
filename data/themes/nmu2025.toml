@@ -10,7 +10,7 @@ name = "David Blue"
   primary = "#000000"
 
   # Menu
-  menu_primary = "#fff"
+  menu_primary = "#ffffffb3"
   menu_text = "#ffffffb3"
   menu_text_active = "#fff"
   menu_title = "#fff"
