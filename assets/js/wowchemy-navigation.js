@@ -125,7 +125,7 @@ $('#back_top_img_btn').on("click" , function (event) {
 });
 // 回到顶部时加class标识
 $(document).scroll(function () {
-  var scroH = $(document).scrollTop();
+  const scroH = $(document).scrollTop();
   if (scroH > 300) {
     $("#top").removeClass("scroll_at_top");
   } else {

@@ -55,12 +55,12 @@ main:
 
   - name: Member
     parent: Team
-    url: 'member'
+    url: 'team/member'
     weight: 10
 
   - name: Community contribution
     parent: Team
-    url: 'community_contribution'
+    url: 'team/community_contribution'
     weight: 20
 
 
