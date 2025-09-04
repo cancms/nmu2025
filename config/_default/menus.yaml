@@ -18,7 +18,7 @@ main:
 
   - name: Background
     parent: Project
-    url: 'background'
+    url: 'projects/background'
     weight: 10
 
 
