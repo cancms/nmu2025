@@ -90,17 +90,18 @@ $('#navbar-main li.nav-item a.nav-link, .js-scroll').on('click', function (event
  * Hide mobile collapsable menu on clicking a link.
  * --------------------------------------------------------------------------- */
 
-$(document).on('click', '.navbar-collapse.show', function (e) {
-  //get the <a> element that was clicked, even if the <span> element that is inside the <a> element is e.target
-  let targetElement = $(e.target).is('a') ? $(e.target) : $(e.target).parent();
-
-  if (targetElement.is('a') && targetElement.attr('class') != 'dropdown-toggle') {
-    $(this).collapse('hide');
-  }
-});
+// $(document).on('click', '.navbar-collapse.show', function (e) {
+//   //get the <a> element that was clicked, even if the <span> element that is inside the <a> element is e.target
+//   let targetElement = $(e.target).is('a') ? $(e.target) : $(e.target).parent();
+//
+//   if (targetElement.is('a') && targetElement.attr('class') != 'dropdown-toggle') {
+//     $(this).collapse('hide');
+//   }
+// });
 
 // Automatic main menu dropdowns on mouse over.
-$('body').on('mouseenter mouseleave', '.dropdown', function (e) {
+// $('body').on('mouseenter mouseleave', '.dropdown', function (e) {
+$('header').on('mouseenter mouseleave', '.dropdown', function (e) {
   var dropdown = $(e.target).closest('.dropdown');
   var menu = $('.dropdown-menu', dropdown);
   dropdown.addClass('show');

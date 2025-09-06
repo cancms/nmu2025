@@ -42,7 +42,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     background-repeat: no-repeat;
     min-width: 12rem;
     text-align: center;
-    height: 5.5rem;
+    min-height: 5.5rem;
     border: 0px solid;
 
   }
@@ -223,6 +223,55 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 
+// 手机优先设计
+.page-docs-notebook {
+
+  .note_title_img {
+    transition: all 0.3s;
+    position: relative;
+    right: 0;
+  }
+
+  .img_box {
+    max-width: 100%;
+    display: flex  ;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .note-box {
+    ul.months-list {
+      li.month-item {
+        .img_box {display: none;}
+        .month-text {display: unset;}
+      }
+    }
+  }
+
+  .note-content-wrap {
+    margin: 3rem   0;
+    background-image: url(../images/docs/notebook-bg.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 45rem;
+    padding: 3rem;
+    overflow-y: auto;
+    .note-content {
+      padding: 1rem;
+
+    }
+  }
+
+  .dropdown-item {
+    color: $text-primary-color !important;
+  }
+}
+
+
+
+
+
 
 
 .scroll_at_top .back_top {
@@ -247,9 +296,65 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 
 
+// 电脑
+@media (min-width: 780px) {
+
+  .page-docs-notebook {
+    .note-box {
+      ul.months-list {
+        display: block;
+        li.month-item {
+
+          display: flex;
+          .img_box {display: block;}
+          .month-text {display: none;}
+
+          .img_box {
+            width: 60%;
+          }
+          .month-parts {
+            position: relative !important;
+            transform: none !important;
+          }
+
+
+        }
+      }
+    }
+
+    .note-box {
+      display: grid;
+      grid-template-columns: 31.25rem 1fr;
+    }
+
+    .note-content-wrap {
+      height: 68.75rem;
+    }
+  }
+
+}
+
+
+
+
+
 // 手机
 @media (max-width: 780px) {
   .navbar-brand img {
     max-height: 2.2rem;
+  }
+
+  .navbar-collapse {
+    background: #fff;
+    top: 90px;
+  }
+  #navbar-main .main-menu-item ul li .nav-link {
+    color: #23232d;
+  }
+
+  .navbar-nav .dropdown-menu {
+    //position: absolute;
+    //left: 18%;
+    //z-index: 1800;
   }
 }

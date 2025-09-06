@@ -10,7 +10,9 @@ name = "nmu2025"
   primary = "#000000"
 
   # Menu
+  # menu 背景色
   menu_primary = "#ffffffb3"
+  # menu 字体颜色
   menu_text = "#ffffffb3"
   menu_text_active = "#fff"
   menu_title = "#fff"

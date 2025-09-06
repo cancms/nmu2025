@@ -1,0 +1,78 @@
+months:
+  - id: "3"
+    image: "m3.png"
+    contents:
+      - title: ""
+        content: |
+          1. Project: Team member recruitment
+
+          2. Time: 2024.03.11-2024.03.16
+
+          3. Member: Jianhua Luo
+
+          4. Result: We selected 7 students out of 60 as regular players. They are Song Zhang, Yaqi Gao, Xinyu Zhu, Xiaoyuan Chen, Yinran Luo, Hanyue Liu, Xudong Tang. Moreover, we choose Yaqi Gao and Xudong Tang as the delegates to participate the iDEC festival in Cambridge University.
+
+  - id: "4"
+    image: "m4.png"
+    contents:
+      - title: ""
+        content: |
+          1. Experiment: The introduction of the cell therapy background
+
+          2. Time: 2024.04.01-2024.04.06
+
+          3. Member: Song Zhang, Yaqi Gao, Xinyu Zhu, Xiaoyuan Chen, Yinran Luo, Hanyue Liu,  Xudong Tang
+
+          4. Summary: Anti-CD19 CAR-T cells have made remarkable achievements in the research of hematological malignancies. In addition to CAR-T, many other immune cells such as NK cells are also ideal choices for the treatment of tumors.
+
+          5. Attachment: [The introduction of the cell therapy background](/)
+
+      - title: ""
+        content: |
+          1. Experiment: Lecture research and report
+
+          2. Time: 2024.04.07-2024.04.27
+
+          3. Member: Song Zhang, Yaqi Gao, Xinyu Zhu, Xiaoyuan Chen, Yinran Luo, Hanyue Liu,  Xudong Tang
+
+          4. Summary: We learned three lectures and made report in the team meeting. After that each player summarized the lecture they read.
+
+          5. Attachment: Apr. 02 Lecture research and report
+
+
+
+  - id: "5"
+    image: "m5.png"
+    contents:
+      - title: ""
+        content: |
+
+
+  - id: "6"
+    image: "m6.png"
+    contents:
+      - title: ""
+        content: |
+
+
+  - id: "7"
+    image: "m7.png"
+    contents:
+      - title: ""
+        content: |
+
+
+  - id: "8"
+    image: "m8.png"
+    contents:
+      - title: ""
+        content: |
+
+
+
+  - id: "9"
+    image: "m9.png"
+    contents:
+      - title: ""
+        content: |
+

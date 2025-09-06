@@ -62,17 +62,18 @@
 
           {{ if .HasChildren }}
           <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            <a href="#" class="nav-link dropdown-toggle"  role="button"  data-bs-toggle="dropdown" aria-expanded="false">
               {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
               <span class="caret"></span>
             </a>
-            <div class="dropdown-menu">
+
+            <ul class="dropdown-menu">
               {{ range .Children }}
-                <a class="dropdown-item" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
+                <li><a class="dropdown-item" href="{{ .URL | relLangURL }}"{{ if $.IsHome }} data-target="{{ .URL }}"{{ end }}>
                   {{- .Pre -}}<span>{{ .Name | safeHTML }}</span>{{- .Post -}}
-                </a>
+                </a></li>
               {{ end }}
-            </div>
+            </ul>
           </li>
 
           {{ else }}
