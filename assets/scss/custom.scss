@@ -227,17 +227,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .page-docs-notebook {
 
   .note_title_img {
-    transition: all 0.3s;
-    position: relative;
-    right: 0;
+    //transition: all 0.3s;
+    //position: relative;
+    //right: 0;
   }
 
   .img_box {
-    max-width: 100%;
-    display: flex  ;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    //max-width: 100%;
+    //display: flex  ;
+    //align-items: center;
+    //justify-content: center;
+    //overflow: hidden;
   }
 
   .note-box {
@@ -305,16 +305,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
         display: block;
         li.month-item {
 
-          display: flex;
-          .img_box {display: block;}
-          .month-text {display: none;}
-
+          // display: flex;
           .img_box {
+            display: block;
             width: 60%;
           }
+          .month-text {display: none;}
+
+
           .month-parts {
-            position: relative !important;
-            transform: none !important;
+            // position: relative !important;
+            // transform: none !important;
           }
 
 
