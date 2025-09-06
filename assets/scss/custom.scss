@@ -223,42 +223,146 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 
 
-// 手机优先设计
+
+
 .page-docs-notebook {
-
-  .note_title_img {
-    //transition: all 0.3s;
-    //position: relative;
-    //right: 0;
+  ul {
+    list-style: none;
   }
-
-  .img_box {
-    //max-width: 100%;
-    //display: flex  ;
-    //align-items: center;
-    //justify-content: center;
-    //overflow: hidden;
+  .notebook-wrap {
+    padding: 6rem 0;
+    background-image: url(../images/docs/nb-bg.png);
+    background-size: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
   }
-
-  .note-box {
-    ul.months-list {
-      li.month-item {
-        .img_box {display: none;}
-        .month-text {display: unset;}
+  .months-and-parts {
+    display: flex;
+    justify-content: space-between;
+    .months-list {
+      overflow: hidden;
+    }
+  }
+  .months-sep-wrap {
+    width: 60%;
+    position: relative;
+    .sep2 {
+      position: absolute;
+      right: -2.5rem;
+      top: -4rem;
+      bottom: 13rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
 
+  .img_box {
+    transition: all 0.3s;
+    position: relative;
+    right: 0;
+    img{
+      width: 300px;
+      height: 133px;
+    }
+  }
+
+  .month-item.active {
+    .img_box {
+      right: -120px;
+    }
+  }
+
+
+  .month-parts {
+    display: flex  ;
+    border-right: 4px solid #000;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .part-item {
+      font-weight: bold;
+      cursor: pointer;
+      width: 140px;
+      text-align: center;
+      height: 68px;
+      padding: 20px 20px 20px 30px;
+      background-size: 100% 100%;
+      margin: 17px 0;
+      background-repeat: no-repeat;
+    }
+
+    li.part-item:nth-child(1n) {
+      background-image: url(../images/docs/label1.png);
+    }
+
+    li.part-item:nth-child(2n) {
+      background-image: url(../images/docs/label2.png);
+    }
+
+    li.part-item:nth-child(3n) {
+      background-image: url(../images/docs/label3.png);
+    }
+
+    li.part-item:nth-child(4n) {
+      background-image: url(../images/docs/label4.png);
+    }
+
+    li.part-item:nth-child(5n) {
+      background-image: url(../images/docs/label5.png);
+    }
+
+    li.part-item:nth-child(6n) {
+      background-image: url(../images/docs/label6.png);
+    }
+
+    li.part-item:nth-child(7n) {
+      background-image: url(../images/docs/label7.png);
+    }
+
+    li.part-item:nth-child(8n) {
+      background-image: url(../images/docs/label8.png);
+    }
+
+    li.part-item:nth-child(9n) {
+      background-image: url(../images/docs/label9.png);
+    }
+
+    li.part-item:nth-child(10n) {
+      background-image: url(../images/docs/label10.png);
+    }
+
+    li.part-item:nth-child(11n) {
+      background-image: url(../images/docs/label11.png);
+    }
+    li.part-item:nth-child(12n) {
+      background-image: url(../images/docs/label12.png);
+    }
+
+
+  }
+
+
   .note-content-wrap {
-    margin: 3rem   0;
+    margin:  0;
     background-image: url(../images/docs/notebook-bg.png);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    height: 45rem;
-    padding: 3rem;
+    height: 68.75rem;
+    padding: 5rem 7rem;
     overflow-y: auto;
     .note-content {
       padding: 1rem;
+    }
+  }
+  .empty-init {
+    .note-content {
+      margin: 12rem 0 0 0;
+      font-weight: bold;
+      font-size: 3.5rem;
+      text-align: center;
 
     }
   }
@@ -293,48 +397,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .page-footer {
   display: none;
 }
-
-
-
-// 电脑
-@media (min-width: 780px) {
-
-  .page-docs-notebook {
-    .note-box {
-      ul.months-list {
-        display: block;
-        li.month-item {
-
-          // display: flex;
-          .img_box {
-            display: block;
-            width: 60%;
-          }
-          .month-text {display: none;}
-
-
-          .month-parts {
-            // position: relative !important;
-            // transform: none !important;
-          }
-
-
-        }
-      }
-    }
-
-    .note-box {
-      display: grid;
-      grid-template-columns: 31.25rem 1fr;
-    }
-
-    .note-content-wrap {
-      height: 68.75rem;
-    }
-  }
-
-}
-
 
 
 

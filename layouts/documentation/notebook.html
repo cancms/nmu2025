@@ -16,35 +16,44 @@
       <script src="https://cdn.jsdmirror.com/npm/lodash@4.17.21/lodash.min.js"></script>
       <script src="https://unpkg.com/vue@3.5.18/dist/vue.global.prod.js"></script>
       <div id="app_publications">
-        <div class="note-box">
+        <div class="row">
 
-          <ul class="nav nav-tabs months-list">
-            <template v-for="(item, index) in reactiveData.monthsData">
-              <li  class="nav-item dropdown month-item " v-if="item.contents.length > 0" >
-                 <a class="nav-link dropdown-toggle month-text"
-                   data-bs-toggle="dropdown"
-                   href="#">${monthsMap[item.id]}</a>
+          <div class="col-12 col-md-4 months-and-parts">
 
-                <div class="   img_box nav-link dropdown-toggle " data-bs-toggle="dropdown"   data-bs-auto-close="false">
-                  <img :src="item.image"  class="month-image"  />
-                </div>
+            <div class="months-sep-wrap">
+              <ul class=" months-list">
+                <li  class="   month-item "
+                     :class="{ 'active': item.id === reactiveData.currentMonthItem.id }"
+                     @click="reactiveData.currentMonthItem=item"
+                     v-for="(item, index) in reactiveData.monthsData">
+                  <a v-if="0" class="  month-text"  href="#">${monthsMap[item.id]}</a>
+                  <div class="   img_box   " >
+                    <img :src="item.image"  class="month-image"  />
+                  </div>
+                </li>
+              </ul>
+              <div class="sep2"><img src='{{"images/docs/sep2.png" | relURL }}'/></div>
+            </div>
 
-
-                <ul class="dropdown-menu month-parts">
-                  <li><a class="dropdown-item" href="#" v-for="(item2, index2) in item.contents"
-                         @click.prevent="showNoteContent(item, index2)"
-                      >
-                     Part ${index2 + 1}
-                  </a></li>
-                </ul>
-              </li>
-            </template>
-
-          </ul>
-
-          <div class="note-content-wrap">
-            <div class="note-content" v-html="reactiveData.showContent"></div>
+            <ul class="  month-parts" v-if="reactiveData.currentMonthItem.contents.length > 0">
+              <li class="part-item" v-for="(item, index) in reactiveData.currentMonthItem.contents"
+                  @click.prevent="showNoteContent(item, index)"
+              >
+                <a class="month-part-item" href="#" >
+                  Part ${index + 1}
+                </a></li>
+            </ul>
           </div>
+          <div class="col-12 col-md-8">
+            <div class="note-content-wrap"
+                 :class="{ 'empty-init': staticDataMap.initContent === reactiveData.showContent }"
+              >
+              <div class="note-content" v-html="reactiveData.showContent"></div>
+            </div>
+          </div>
+
+
+
 
         </div>
       </div>
@@ -54,6 +63,9 @@
         //  → https://example.org/docs/
         const baseUrl = '{{ site.BaseURL }}';
 
+        const staticDataMap = {
+          initContent: 'CLICK ON THE RED TAB TO VIEW THE INDIVIDUAL LAB RECORDS',
+        };
         const monthsMap = {
           1: 'Jan',
           2: 'Feb',
@@ -98,7 +110,9 @@
 
         function setup() {
           const reactiveData = reactive({
-            showContent: 'CLICK ON THE RED TAB TO VIEW THE INDIVIDUAL LAB RECORDS',
+            showContent: staticDataMap.initContent,
+            showMonthParts: [],
+            currentMonthItem: {contents: []},
             monthsData: [],
           });
 
@@ -106,8 +120,6 @@
 
 
           onMounted(() => {
-
-
           });
 
 
@@ -118,20 +130,23 @@
             allDataList = [...data];
             reactiveData.monthsData = data;
 
-
-
           });
 
-          function showNoteContent(monthItem, partIndex) {
-
-            reactiveData.showContent = _.get(monthItem, `contents[${partIndex}].content`, '');
+          function showNoteContent(partItem, partIndex) {
+            // reactiveData.showContent = _.get(monthItem, `contents[${partIndex}].content`, '');
+            reactiveData.showContent = partItem.content;
           }
+
+          // function showMonthParts(monthItem) {
+          //   reactiveData.showMonthParts = _.get(monthItem, `contents`, []);
+          // }
 
 
 
           return {
             reactiveData,
             monthsMap,
+            staticDataMap,
             showNoteContent,
           };
         }
