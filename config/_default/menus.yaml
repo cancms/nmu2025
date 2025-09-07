@@ -78,7 +78,7 @@ main:
 
   - name: Protocol
     parent: Documentation
-    url: 'documentation/Protocol'
+    url: 'documentation/protocol'
     weight: 20
 
 

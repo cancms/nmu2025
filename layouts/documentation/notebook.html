@@ -14,7 +14,7 @@
 
 
       <script src="https://cdn.jsdmirror.com/npm/lodash@4.17.21/lodash.min.js"></script>
-      <script src="https://unpkg.com/vue@3.5.18/dist/vue.global.prod.js"></script>
+      <script src="https://cdn.jsdmirror.com/npm/vue@3.5.18/dist/vue.global.prod.js"></script>
       <div id="app_publications">
         <div class="row">
 
@@ -26,7 +26,6 @@
                      :class="{ 'active': item.id === reactiveData.currentMonthItem.id }"
                      @click="reactiveData.currentMonthItem=item"
                      v-for="(item, index) in reactiveData.monthsData">
-                  <a v-if="0" class="  month-text"  href="#">${monthsMap[item.id]}</a>
                   <div class="   img_box   " >
                     <img :src="item.image"  class="month-image"  />
                   </div>
@@ -46,9 +45,10 @@
           </div>
           <div class="col-12 col-md-8">
             <div class="note-content-wrap"
-                 :class="{ 'empty-init': staticDataMap.initContent === reactiveData.showContent }"
+                 :class="{ 'empty-init': staticDataMap.initContent === reactiveData.boardContent.content }"
               >
-              <div class="note-content" v-html="reactiveData.showContent"></div>
+              <div class="month-title">${selectedMonthPart}</div>
+              <div class="note-content" v-html="reactiveData.boardContent.content"></div>
             </div>
           </div>
 
@@ -85,7 +85,7 @@
       <script>
 
 
-        const { createApp, reactive, ref, onMounted, nextTick  } = window.Vue;
+        const { createApp, reactive, ref, onMounted, nextTick, computed  } = window.Vue;
 
         function loadNotebookData() {
           return new Promise((resolve, reject) => {
@@ -110,16 +110,31 @@
 
         function setup() {
           const reactiveData = reactive({
-            showContent: staticDataMap.initContent,
-            showMonthParts: [],
-            currentMonthItem: {contents: []},
+            // showContent: staticDataMap.initContent,
+            boardContent: {partIndex: '', monthId: '', content: staticDataMap.initContent},
+            currentMonthItem: {id: '', contents: []},
+            currentMonthPart: '',
             monthsData: [],
           });
 
-          let allDataList = [];
 
 
           onMounted(() => {
+          });
+
+          // 根据所选的part来变化
+          const selectedMonthPart = computed(() => {
+            let monthPart = '';
+            if(reactiveData.boardContent.partIndex !== '') {
+              let part = reactiveData.boardContent.partIndex + 1;
+              part = `Part ${part}`
+
+              const monthName = monthsMap[reactiveData.boardContent.monthId] + '.';
+              monthPart = `${monthName} ${part}`;
+            }
+
+            // console.log(part, reactiveData.currentMonthPart)
+            return monthPart;
           });
 
 
@@ -127,19 +142,21 @@
             // data.map(item => {
             //   item.image = `${baseUrl}${item.image}`
             // });
-            allDataList = [...data];
             reactiveData.monthsData = data;
 
           });
 
           function showNoteContent(partItem, partIndex) {
             // reactiveData.showContent = _.get(monthItem, `contents[${partIndex}].content`, '');
-            reactiveData.showContent = partItem.content;
-          }
+            // reactiveData.showContent = partItem.content;
+            reactiveData.currentMonthPart = partIndex;
 
-          // function showMonthParts(monthItem) {
-          //   reactiveData.showMonthParts = _.get(monthItem, `contents`, []);
-          // }
+            Object.assign(reactiveData.boardContent, {
+              partIndex: partIndex,
+              monthId: reactiveData.currentMonthItem.id,
+              content: partItem.content
+            });
+          }
 
 
 
@@ -147,6 +164,7 @@
             reactiveData,
             monthsMap,
             staticDataMap,
+            selectedMonthPart,
             showNoteContent,
           };
         }
@@ -155,10 +173,10 @@
           delimiters: ['${', '}'],
           setup,
         }).mount("#app_publications");
+
       </script>
 
     </div>
-
 
 
 
